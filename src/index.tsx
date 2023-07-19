@@ -12,8 +12,12 @@
 import { React } from "react";
 import { render } from "react-dom";
 
-const greetingMessage = "hello";
-const App = (description) => {
+interface AppProps {
+  description: string;
+}
+const greetingMessage: string = "hello";
+
+const App = ({ description }: AppProps) => {
   return (
     <React.Fragment>
       <h1>{greetingMessage}</h1>
